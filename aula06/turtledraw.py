@@ -9,7 +9,16 @@ t = turtle.Turtle()
 # Put your code here
 with open('drawing.txt') as f:
     for line in f:
-        lineCleared = line.split()
+        line = line.strip('\n')
+        print('Reading text:', line)
+        if line == 'UP': 
+            t.up()
+        elif line == 'DOWN': 
+            t.down()
+        else:
+            splitCoords = line.split()
+            coordX, coordY = float(splitCoords[0]), float(splitCoords[1])
+            t.goto(coordX, coordY)
 
 # wait
 turtle.Screen().exitonclick()
