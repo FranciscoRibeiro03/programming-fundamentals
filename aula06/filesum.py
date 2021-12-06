@@ -15,9 +15,9 @@ def main():
 def fileSum(filename):
     # Complete a função para ler números do ficheiro e devolver a sua soma.
     s = 0
-    with open('nums.txt') as f:
+    with open(filename) as f:
         for line in f:
-            s += float(line.split('\n')[0])
+            s += float(line)
     return s
 
 
