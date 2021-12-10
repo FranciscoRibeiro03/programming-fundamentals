@@ -1,7 +1,15 @@
 import math
 
-def floatInput(prompt):
-    res = float(input(prompt))
+def floatInput(prompt, min=-math.inf, max=math.inf):
+    assert min < max, "Minimum should be higher than maximum!"
+    while True:
+        try:
+            res = float(input(prompt))
+            if not (res < min or res > max):
+                break
+            print("ERROR: Value should be between {} and {}".format(min, max))    
+        except ValueError:
+            print('ERROR: Not a float!')
     return res
 
 
@@ -19,7 +27,7 @@ def main():
     print("t:", t)
 
     # d) What happens if you uncomment this?
-    # impossible = floatInput("Value in [3, 0]? ", min=3, max=0)
+    impossible = floatInput("Value in [3, 0]? ", min=3, max=0)
 
     return
 
