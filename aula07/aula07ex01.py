@@ -1,6 +1,9 @@
+from sys import argv
+
+
 def getDict():
     lettersDict = {}
-    with open('pg3333.txt', encoding="utf-8") as file:
+    with open(argv[1], encoding="utf-8") as file:
         for line in file:
             for char in line:
                 if char.isalpha():
@@ -12,6 +15,7 @@ def getDict():
     return lettersDict
 
 def main():
+    assert len(argv) > 1, "Need at least one argument"
     letras = getDict()
     for key, value in sorted(letras.items()):
         print("{} - {}".format(key, value))
