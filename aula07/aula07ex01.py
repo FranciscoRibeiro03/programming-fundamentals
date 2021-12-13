@@ -13,8 +13,7 @@ def getDict():
 
 def main():
     letras = getDict()
-    alfabeto = "abcdefghijklmnopqrstuvwxyz"
-    for letra in alfabeto:
-        print("{} - {}".format(letra, letras[letra]))
+    for key, value in sorted(letras.items()):
+        print("{} - {}".format(key, value))
 
 main()
