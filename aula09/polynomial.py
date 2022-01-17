@@ -4,7 +4,7 @@
 # polynomial2(a,b,c) deve devolver uma função f tal que
 # f(x) seja o polinómio de segundo grau ax²+bx+c.
 def polynomial2(a, b, c):
-    ...
+    return lambda x: a*(x**2) + b*x + c
 
 
 # DESAFIO EXTRA:
