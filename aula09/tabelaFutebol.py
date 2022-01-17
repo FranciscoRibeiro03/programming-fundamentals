@@ -59,7 +59,7 @@ def main():
     # b)
     # Acrescente os argumentos adequados à função sorted para
     # obter uma tabela ordenada por ordem decrescente de pontos:
-    tab = sorted(tabela  )
+    tab = sorted(tabela, reverse=True, key=lambda t: pontos(t))
     printTabela(tab)
 
     # c)
