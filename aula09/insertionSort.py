@@ -3,13 +3,13 @@
 # using the insertion sort algorithm.
 # Modify it to accept a key= keyword argument that works like in list.sort.
 
-def insertionSort(lst):
+def insertionSort(lst, key=None):
     i = 1   # i = index of element to insert next = end of sorted part
     while i < len(lst):
         x = lst[i]    # x is the element to insert
         # insert x into lst[:i]
         k = i-1
-        while k >= 0 and lst[k] > x:
+        while k >= 0 and ((key(lst[k]) > key(x)) if key else (lst[k] > x)):
             lst[k+1] = lst[k]
             k -= 1
         lst[k+1] = x
