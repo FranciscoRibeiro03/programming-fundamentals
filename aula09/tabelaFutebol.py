@@ -44,7 +44,7 @@ numJogos = lambda reg: reg[V]+reg[E]+reg[D]
 # Complete a expressão lambda para definir uma função que,
 # dado um registo de uma equipa, devolva o número de pontos da equipa.
 # (Cada vitória vale 3 pontos, cada empate vale 1 ponto.)
-pontos = lambda reg: ...
+pontos = lambda reg: (3*reg[V])+reg[E]
 
 def main():
     # Teste:
