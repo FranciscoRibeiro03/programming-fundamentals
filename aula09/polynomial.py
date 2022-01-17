@@ -14,7 +14,16 @@ def polynomial2(a, b, c):
 # polynomial(a), onde a=[a0, a1, ..., an], deve devolver uma função f tal que
 # f(x) seja o polinómio a0*x**n + a1*x**(n-1) + ... + an.
 def polynomial(coefs):
-    ...
+    def f(x):
+        sum = 0
+        n = len(coefs) - 1
+        aIndex = 0
+        while n >= 0:
+            sum += coefs[aIndex]*(x**n)
+            aIndex += 1
+            n -= 1
+        return sum
+    return f
 
 
 def main():
