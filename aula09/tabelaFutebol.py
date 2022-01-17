@@ -65,7 +65,7 @@ def main():
     # c)
     # Acrescente os argumentos adequados à função sorted para
     # obter uma tabela ordenada por ordem decrescente da diferença GM-GS:
-    tab = sorted(tabela  )
+    tab = sorted(tabela, reverse=True, key=lambda t: t[GM]-t[GS])
     printTabela(tab)
 
     # d)
