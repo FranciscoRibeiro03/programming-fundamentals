@@ -34,12 +34,12 @@ def main():
 
     print("\nTesting findFiles('.', '.py'):")
     lst = findFiles(".", ".py")
-    print(lst)
+    print('\n'.join(lst))
     assert isinstance(lst, list)
 
     print("\nTesting findFiles('..', '.csv'):")
     lst = findFiles("..", ".csv")
-    print(lst)
+    print('\n'.join(lst))
 
 if __name__ == "__main__":
     main()
