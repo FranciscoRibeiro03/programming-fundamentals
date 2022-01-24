@@ -20,7 +20,7 @@ def main():
 
 
     print("a) Table of common interests:")
-    commoninterests = ...
+    commoninterests = {interest: (person1, person2) for person1, person2, interest}
     print(commoninterests)
 
     print("b) Maximum number of common interests:")

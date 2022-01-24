@@ -34,8 +34,13 @@ def loadStockFile(filename):
 
 def totalVolume(lst):
     totVol = {}
-    # Complete ...
-
+    for empresaListing in lst:
+        nomeEmpresa = empresaListing[NAME]
+        volume = empresaListing[VOLUME]
+        if nomeEmpresa in totVol:
+            totVol[nomeEmpresa] += volume
+        else:
+            totVol[nomeEmpresa] = volume
     return totVol
 
 def maxValorization(lst):
