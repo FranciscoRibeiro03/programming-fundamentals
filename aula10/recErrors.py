@@ -2,6 +2,7 @@
 # Calcula o factorial de n, baseado na recorrencia n! = n*(n-1)!.
 # Mas não termina!  Detete a causa e corrija o erro.
 def fact(n):
+    if n <= 1: return 1
     return n*fact(n-1)
 
 
@@ -11,7 +12,7 @@ def fact(n):
 def gcd(a, b):
     if b == 0:
         return a
-    return gcd(a%b, b)
+    return gcd(b, a%b)
 
 
 def main():
