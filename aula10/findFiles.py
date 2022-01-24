@@ -16,7 +16,16 @@ def printDirFiles(d):
 
 def findFiles(path, ext):
     # Complete...
-    ...
+    lst = []
+    filesList = os.listdir(path)
+    for fname in filesList:
+        newPath = os.path.join(path, fname)
+        if os.path.isfile(newPath):
+            if newPath.endswith(ext):
+                lst.append(newPath)
+        elif os.path.isdir(newPath):
+            lst += findFiles(newPath, ext)
+    return lst
 
 
 def main():
